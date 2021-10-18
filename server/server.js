@@ -1,9 +1,13 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
+const cors = require("cors");
 
-app.get("/", function (req, res) {
-  res.send("Hello World");
-});
+app.use(cors());
+
+const ApiRouter = require("./Router/ApiRouter");
+
+app.use("/api", ApiRouter);
 
 const PORT = 8080;
 
