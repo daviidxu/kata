@@ -30,7 +30,7 @@ export const Dashboard = (props) => {
   console.log(currentMovies);
 
   return (
-    <div className="dashboard">
+    <div className="row dashboard">
       {currentMovies?.map((elem, index) => {
         return <MovieCard {...elem} key={index} />;
       })}

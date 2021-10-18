@@ -1,7 +1,7 @@
 import "./App.scss";
 
-import { Header, Footer } from "./layout/";
-import { Dashboard } from "./components/";
+import { Header, Footer } from "./layout";
+import { Dashboard } from "./components";
 
 const App = () => {
   return (

@@ -17,41 +17,43 @@ export const MovieCard = ({
   titleType,
 }) => {
   return (
-    <div className="movie__card">
-      <div className="movie__card__information">
-        <div className="movie__card__titles">
-          <h2>{primaryTitle}</h2>
-          <p>Original title: {originalTitle}</p>
+    <div className="col-xl-4 col-md-6 col-sm-12 gx-2 gy-2">
+      <div className="row movie__card">
+        <div className="movie__card__information col-xl-9">
+          <div className="row movie__card__titles">
+            <h2>{primaryTitle}</h2>
+            <p>Original title: {originalTitle}</p>
+          </div>
+          <div className="row movie__card__extra__details">
+            <div className="details__text col-xl-3">
+              <p>ID</p>
+              <p>{tconst}</p>
+            </div>
+            <div className="details__text col-xl-3">
+              <p>Minutes</p>
+              <p>{runtimeMinutes}</p>
+            </div>
+            <div className="details__text col-xl-3">
+              <p>Start year</p>
+              <p>{startYear}</p>
+            </div>
+            <div className="details__text col-xl-3">
+              <p>End year</p>
+              <p>{endYear === "\\N" ? "-" : endYear}</p>
+            </div>
+            <div className="details__text col-xl-3">
+              <p>Is adult</p>
+              <p>{isAdult === "0" ? "No" : "Yes"}</p>
+            </div>
+            <div className="details__text col-xl-3">
+              <p>Genres</p>
+              <p>{genres}</p>
+            </div>
+          </div>
         </div>
-        <div className="movie__card__extra__details">
-          <div className="details__text">
-            <p>ID</p>
-            <p>{tconst}</p>
-          </div>
-          <div className="details__text">
-            <p>Minutes</p>
-            <p>{runtimeMinutes}</p>
-          </div>
-          <div className="details__text">
-            <p>Start year</p>
-            <p>{startYear}</p>
-          </div>
-          <div className="details__text">
-            <p>End year</p>
-            <p>{endYear === "\\N" ? "-" : endYear}</p>
-          </div>
-          <div className="details__text">
-            <p>Is adult</p>
-            <p>{isAdult === "0" ? "No" : "Yes"}</p>
-          </div>
-          <div className="details__text">
-            <p>Genres</p>
-            <p>{genres}</p>
-          </div>
+        <div className="movie__card__picture col-xl-3">
+          <Picture />
         </div>
-      </div>
-      <div className="movie__card__picture">
-        <Picture />
       </div>
     </div>
   );

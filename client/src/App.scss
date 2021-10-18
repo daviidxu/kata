@@ -61,3 +61,7 @@
   font-family: "Roboto-medium";
   src: url("./assets/fonts/Roboto/Roboto-Medium.ttf");
 }
+
+.row {
+  --bs-gutter-x: 0 !important;
+}

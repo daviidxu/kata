@@ -5,6 +5,8 @@
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+  justify-content: space-between;
+  height: 100%;
 
   .movie__card__titles {
     text-align: left;
@@ -18,23 +20,31 @@
       font-family: "roboto-regular";
       font-size: 24px;
       font-weight: unset;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
 
     p {
       font-family: "roboto-thin-italic";
       font-size: 16px;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
     }
   }
 
   .movie__card__extra__details {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(5, 1fr);
     text-align: left;
     p {
       margin: 0px 10px;
     }
 
     .details__text {
+      text-align: center;
+
       :first-child {
         background-color: #f3f3f3;
         text-align: center;
@@ -46,12 +56,21 @@
         font-size: 12px;
       }
     }
+
+    @media (max-width: 1024px) {
+      // grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 375px) {
+      // grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   .movie__card__picture {
     background-color: #f3f3f3;
     height: 100%;
     align-items: center;
+    justify-content: center;
     display: flex;
     padding: 0px 10px;
   }
